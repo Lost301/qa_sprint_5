@@ -2,7 +2,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from data import BASE_URL
 
 
 @pytest.fixture
@@ -15,6 +14,3 @@ def driver():
     browser.quit()
 
 
-@pytest.fixture
-def base_url():
-    return BASE_URL
