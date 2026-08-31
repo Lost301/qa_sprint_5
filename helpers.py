@@ -1,7 +1,7 @@
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
-from data import BASE_URL, generate_credentials
+from data import DataGenerator, Urls
 from locators import Locators as L
 
 def wait_click(driver, locator):
@@ -11,8 +11,8 @@ def wait_click(driver, locator):
     except ElementClickInterceptedException: driver.execute_script("arguments[0].click();", element)
 
 def register_user(driver):
-    email, password = generate_credentials()
-    driver.get(BASE_URL + "register")
+    email, password = DataGenerator.generate_credentials()
+    driver.get(Urls.BASE_URL + "register")
     WebDriverWait(driver, 10).until(ec.visibility_of_element_located(L.NAME)).send_keys("Test User")
     driver.find_element(*L.REGISTER_EMAIL).send_keys(email)
     driver.find_element(*L.PASSWORD).send_keys(password)
