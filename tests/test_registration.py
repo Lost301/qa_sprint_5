@@ -4,6 +4,7 @@ from data import BASE_URL, generate_credentials
 from helpers import wait_click
 from locators import Locators as L
 
+
 class TestRegistration:
     def test_successful_registration(self, driver):
         email, password = generate_credentials()
