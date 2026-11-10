@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Selenium/browser artifacts
+screenshots/
+downloads/
+
+# Local environment and OS files
+.env
+.DS_Store
+Thumbs.db
+
+# Pytest
+*.log
